@@ -4,6 +4,7 @@ using UnitTestAndDebug;
 
 namespace Tests
 {
+    [TestFixture]
     public class Tests
     {
         [SetUp]
@@ -15,7 +16,22 @@ namespace Tests
         [Test]
         public void Test1() // Cambiá el nombre para indicar qué estás probando
         {
-            // Insertá tu código  de pruebaaquí
+            Person Franco = new Person("Franco","5.308.038-6");
+            IdUtils.IdIsValid(Franco.ID);
         }
+
+        [Test]
+        public void Test2() // Cambiá el nombre para indicar qué estás probando
+        {
+            Person Mateo = new Person("Franco","4.308.038-6");
+            IdUtils.IdIsValid(Mateo.ID);
+        }
+
+        public void Test3() // Cambiá el nombre para indicar qué estás probando
+        {
+            Person Franco = new Person("Franco","5.308.038-6");
+            IdUtils.IdIsValid(Franco.ID);
+        }
+
     }
 }
